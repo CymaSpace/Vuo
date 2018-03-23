@@ -26,7 +26,6 @@ CountItemsInList [type="vuo.list.count.VuoPoint3d" version="1.0.0" label="Count 
 CountItemsInList2 [type="vuo.list.count.VuoPoint3d" version="1.0.0" label="Count Items in List|<refresh>refresh\l|<list>list\l|<itemCount>itemCount\r" pos="-210,540"];
 FilterPolyphonicNote [type="vuo.midi.track.note.poly" version="1.0.0" label="Track Notes|<refresh>refresh\l|<note>note\l|<channel>channel\l|<noteNumberMin>noteNumberMin\l|<noteNumberMax>noteNumberMax\l|<reset>reset\l|<notes>notes\r|<noteNumbers>noteNumbers\r|<velocities>velocities\r" pos="1425,960" fillcolor="yellow" _channel="1" _noteNumberMin="0" _noteNumberMax="87"];
 FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="-345,120" fillcolor="yellow" _started_eventThrottling="enqueue"];
-FirePeriodically [type="vuo.time.firePeriodically2" version="2.0.0" label="Fire Periodically|<refresh>refresh\l|<seconds>seconds\l|<fired>fired\r" pos="-405,45" _seconds="1.0" _fired_eventThrottling="drop"];
 GetItemFromList2 [type="vuo.list.get.VuoPoint3d" version="1.0.1" label="Get Item from List|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="930,-255" fillcolor="orange"];
 GetItemFromList3 [type="vuo.list.get.VuoPoint3d" version="1.0.1" label="Get Item from List|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="930,-165" fillcolor="orange"];
 GetItemFromList4 [type="vuo.list.get.VuoSceneObject" version="1.0.1" label="Get Item from List|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="1890,255"];
@@ -56,7 +55,7 @@ RenderSceneToWindow2 [type="vuo.scene.render.window" version="2.3.0" label="Rend
 Round [type="vuo.math.round" version="2.0.0" label="Round|<refresh>refresh\l|<real>real\l|<rounded>rounded\r" pos="660,600"];
 Round5 [type="vuo.math.round" version="2.0.0" label="Round|<refresh>refresh\l|<real>real\l|<rounded>rounded\r" pos="1995,495"];
 Scale [type="vuo.math.scale.VuoReal" version="2.0.0" label="Scale|<refresh>refresh\l|<value>value\l|<start>start\l|<end>end\l|<scaledStart>scaledStart\l|<scaledEnd>scaledEnd\l|<limitToRange>limitToRange\l|<scaledValue>scaledValue\r" pos="705,-45" fillcolor="orange" _start="1" _end="13" _scaledStart="0" _scaledEnd="1" _limitToRange="false"];
-Scale2 [type="vuo.math.scale.VuoReal" version="2.0.0" label="Scale|<refresh>refresh\l|<value>value\l|<start>start\l|<end>end\l|<scaledStart>scaledStart\l|<scaledEnd>scaledEnd\l|<limitToRange>limitToRange\l|<scaledValue>scaledValue\r" pos="1500,510" fillcolor="magenta" _start="1" _end="13" _scaledStart="0.80000000000000004" _scaledEnd="1.8" _limitToRange="false"];
+Scale2 [type="vuo.math.scale.VuoReal" version="2.0.0" label="Scale|<refresh>refresh\l|<value>value\l|<start>start\l|<end>end\l|<scaledStart>scaledStart\l|<scaledEnd>scaledEnd\l|<limitToRange>limitToRange\l|<scaledValue>scaledValue\r" pos="1500,510" fillcolor="magenta" _start="1" _end="13" _scaledStart="0" _scaledEnd="1" _limitToRange="false"];
 ScaleList2 [type="vuo.math.scale.list.VuoPoint3d" version="1.0.0" label="Scale List|<refresh>refresh\l|<scale>scale\l|<list>list\l|<scaledList>scaledList\r" pos="330,135" fillcolor="yellow" _scale="{\"x\":0.18000000715255737,\"y\":0.18000000715255737,\"z\":1}"];
 
 Add3:sum -> Round5:real;
@@ -84,7 +83,6 @@ CountItemsInList:itemCount -> BuildList2:fire;
 FilterPolyphonicNote:noteNumbers -> ProcessList2:fire;
 FireOnStart:started -> Calculate3:refresh;
 FireOnStart:started -> MakeParametricPoints:refresh;
-FirePeriodically:fired -> Calculate3:refresh;
 GetItemFromList2:item -> MakeList27:1;
 GetItemFromList3:item -> MakeList27:2;
 GetItemFromList4:item -> ProcessList2:processedItem;
