@@ -1,0 +1,102 @@
+desc: midi color spiral by Kite Giedraitis / TallKite Software
+
+// MIDI-only effect
+in_pin:none
+out_pin:none
+
+slider1: 0 <0, 16, 1> midi in channel (0 = all channels)
+slider2: 1 <0, 10, 0.1> note decay time (seconds)
+// quieter notes decay a little faster than this
+slider3: 36 <21, 108, 1> lowest note (middle-C = 60)
+slider4: 96 <21, 108, 1> highest note
+
+@init
+gfx_mode = 1;	// draw in additive mode
+graphicsCPS = 30;	// # of times the graphics code runs per second
+minBrightness = 0.03;	// the brightness at which the note disappears
+lowNote = 36;	// C2
+hiNote = 96;	// C7, 5 octave range total
+Veloc = 0;	// velocity of each of the 128 midi notes
+memset (Veloc, 0, 128);
+Brightness = 128;	// brightness of each of the 128 midi notes
+memset (Brightness, 0, 128);
+
+Colors = 256;	// RGB colors of each of the 12 notes
+Colors [0] = 1;	Colors [1] = 0;	Colors [2] = 0; 
+Colors [3] = 1;	Colors [4] = 0.5;	Colors [5] = 0; 
+Colors [6] = 1;	Colors [7] = 1;	Colors [8] = 0; 
+Colors [9] = 0.5;	Colors [10] = 1;	Colors [11] = 0; 
+Colors [12] = 0;	Colors [13] = 1;	Colors [14] = 0; 
+Colors [15] = 0;	Colors [16] = 1;	Colors [17] = 0.5; 
+Colors [18] = 0;	Colors [19] = 1;	Colors [20] = 1; 
+Colors [21] = 0;	Colors [22] = 0.5;	Colors [23] = 1; 
+Colors [24] = 0;	Colors [25] = 0;	Colors [26] = 1; 
+Colors [27] = 0.5;	Colors [28] = 0;	Colors [29] = 1; 
+Colors [30] = 1;	Colors [31] = 0;	Colors [32] = 1; 
+Colors [33] = 1;	Colors [34] = 0;	Colors [35] = 0.5; 
+
+@slider
+// graphicsCPS * slider2 = # of graphics cycles for exponential fade out
+// fadeRate ^ (graphicsCPS * slider2) = minBrightness = virtually invisible
+slider2 == 0 ? fadeRate = 0
+: fadeRate = minBrightness ^ (1 / (graphicsCPS * slider2));
+
+slider3 > slider4 - 12 ? (	// less than one octave?
+slider3 != lowNote ?	// bottom note changed?
+slider3 = slider4 - 12	// lower the bottom note
+: slider4 = slider3 + 12;	// or else raise the top note
+);
+lowNote = slider3;	// 36 = C2
+hiNote = slider4;	// 96 = C7, 5 octave range total
+
+@block
+while (midirecv (blockOffset, status, databytes)) (
+msgNum = (status & 240) / 16; // message # portion of the status byte
+channelNum = status & 15;	// channels 1-16 are really 0-15
+note = CCnum = LSB = databytes & 127; // LSB = least significant byte
+velocity = CCvalue = MSB = (databytes / 256) | 0;	// MSB = most significant byte
+(channelNum == slider1 - 1) || (slider1 == 0) ? (	// midi on "our" channel? 
+msgNum == 9 ? (	// 9 = note-on message
+Veloc [note] = velocity;	// store the velocity
+Brightness [note] = Veloc [note] / 127;
+) : msgNum == 8 ? Veloc [note] = 0;	// 8 = note-off message
+);
+midisend (blockOffset | 0, (16 * msgNum + channelNum) | 0, databytes | 0);
+);
+
+@gfx 600 400
+p = (hiNote - lowNote) / 12;	// p = # of turns in the spiral
+armGap = min (gfx_h, gfx_w) / (2 * p + 3);	// gap between the arms of the spiral
+red = green = blue = 0;	// track total of RGB components, for average color
+
+p = lowNote;	// p = note #
+loop (hiNote - lowNote + 1,	// for each note in our midi range
+q = 0.52359878 * (p % 12);	// q = angle in radians = (pi/6) * p
+r = armGap * (1 + (p - lowNote) / 12);	// r = radius
+gfx_r = Colors [3 * (p % 12)];	// look up this note's color
+gfx_g = Colors [3 * (p % 12) + 1];
+gfx_b = Colors [3 * (p % 12) + 2];
+p == lowNote ? (	// the first line should be invisible
+gfx_x = gfx_w / 2 + r * sin (q);	// so start at the first dot
+gfx_y = gfx_h / 2 - r * cos (q);
+);
+gfx_lineto (gfx_w / 2 + r * sin (q),	// draw the spiral
+gfx_h / 2 - r * cos (q));
+Veloc [p] == 0 && Brightness [p] > 0 ? (	// unplayed note not fully decayed yet?
+Brightness [p] *= fadeRate;	// fade it out
+Brightness [p] < minBrightness ? Brightness [p] = 0;
+); 
+Brightness [p] > 0 ? (
+gfx_r *= Brightness [p];	// dim the color to match the brightness
+gfx_g *= Brightness [p];
+gfx_b *= Brightness [p];
+gfx_circle (gfx_x, gfx_y, armGap / 3, 1);	// draw the dot
+red += gfx_r; green += gfx_g; blue += gfx_b;	// add up all the colors
+);
+p += 1;
+);
+
+p = max (max (red, green), blue);	// p = largest RGB component
+p > 1 ? (red /= p; green /= p; blue /= p);	// scale the color down to range
+gfx_r = red; gfx_g = green; gfx_b = blue;	// draw a central dot in the average color
+p > 0 ? gfx_circle (gfx_w / 2, gfx_h / 2, 0.667 * armGap, 1);
