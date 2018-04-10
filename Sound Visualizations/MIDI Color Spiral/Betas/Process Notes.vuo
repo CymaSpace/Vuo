@@ -1,0 +1,59 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright Â© 2015 [Bodysoulspirit](https://vuo.org/user/2475)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+AllowFirstEvent3 [type="vuo.event.allowFirst" version="1.0.0" label="Allow First Event|<refresh>refresh\l|<event>event\l|<reset>reset\l|<firstEvent>firstEvent\r" pos="570,735" fillcolor="magenta"];
+CombineLayers2 [type="vuo.layer.combine" version="1.0.0" label="Combine Layers|<refresh>refresh\l|<transform>transform\l|<layers>layers\l|<layer>layer\r" pos="1635,210"];
+ConvertIntegerToRealNumber [type="vuo.type.integer.real" version="1.0.0" label="Convert Integer to Real Number|<refresh>refresh\l|<integer>integer\l|<real>real\r" pos="1230,1035"];
+ConvertIntegerToRealNumber2 [type="vuo.type.integer.real" version="1.0.0" label="Convert Integer to Real Number|<refresh>refresh\l|<integer>integer\l|<real>real\r" pos="1020,645"];
+ConvertIntegerToRealNumber3 [type="vuo.type.integer.real" version="1.0.0" label="Convert Integer to Real Number|<refresh>refresh\l|<integer>integer\l|<real>real\r" pos="1020,510"];
+FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="105,750" fillcolor="yellow" _started_eventThrottling="enqueue"];
+GetItemFromList2 [type="vuo.list.get.VuoPoint2d" version="1.0.1" label="Get Item from List|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="1080,645"];
+GetNoteValues [type="vuo.midi.get.note" version="1.0.0" label="Get Note Values|<refresh>refresh\l|<note>note\l|<channel>channel\r|<isNoteOn>isNoteOn\r|<velocity>velocity\r|<noteNumber>noteNumber\r" pos="570,615" fillcolor="magenta"];
+HoldList2 [type="vuo.data.hold.list.VuoPoint2d" version="1.0.0" label="Hold List|<refresh>refresh\l|<initialValue>initialValue\l|<newValue>newValue\l|<heldValue>heldValue\r" pos="900,765" fillcolor="yellow"];
+MakeHSLColor3 [type="vuo.color.make.hsl" version="2.0.0" label="Make HSL Color|<refresh>refresh\l|<hue>hue\l|<saturation>saturation\l|<lightness>lightness\l|<opacity>opacity\l|<color>color\r" pos="1080,480" _saturation="1" _opacity="1"];
+MakeList [type="vuo.list.make.2.VuoWindowProperty" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="1814,326"];
+MakeList2 [type="vuo.list.make.2.VuoLayer" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="1589,236"];
+MakeList5 [type="vuo.list.make.0.VuoPoint2d" version="2.0.0" label="Make List|<refresh>refresh\l|<list>list\r" pos="859,776" fillcolor="yellow"];
+MakeOvalLayer [type="vuo.layer.make.oval" version="1.1.0" label="Make Oval Layer|<refresh>refresh\l|<name>name\l|<color>color\l|<anchor>anchor\l|<center>center\l|<rotation>rotation\l|<width>width\l|<height>height\l|<sharpness>sharpness\l|<layer>layer\r" pos="1350,465" _anchor="{\"horizontalAlignment\":\"center\",\"verticalAlignment\":\"center\"}" _rotation="0" _width="0.10000000000000001" _height="0.10000000000000001"];
+MakePointsAlongLine2 [type="vuo.point.make.curve.VuoPoint2d" version="1.0.0" label="Make Points along Line|<refresh>refresh\l|<startPosition>startPosition\l|<endPosition>endPosition\l|<curve>curve\l|<easing>easing\l|<numberOfPoints>numberOfPoints\l|<points>points\r" pos="300,780" fillcolor="yellow" _startPosition="{\"x\":-1,\"y\":0}" _endPosition="{\"x\":1,\"y\":0}" _curve="\"linear\"" _easing="\"in\"" _numberOfPoints="144"];
+ProcessList2 [type="vuo.list.process.VuoMidiNote.VuoLayer" version="1.0.1" label="Process List|<refresh>refresh\l|<fire>fire\l|<processedItem>processedItem\l|<processedList>processedList\r|<processItem>processItem\r" pos="1305,285" fillcolor="magenta" _processedList_eventThrottling="enqueue" _processItem_eventThrottling="enqueue"];
+ReceiveMIDIEvents [type="vuo.midi.receive" version="2.1.1" label="Receive MIDI Events|<refresh>refresh\l|<device>device\l|<receivedNote>receivedNote\r|<receivedController>receivedController\r|<receivedPitchBend>receivedPitchBend\r" pos="75,285" fillcolor="cyan" _device="{\"id\":-1,\"name\":\"RŽseau Macbook Midi Wifi\"}" _receivedNote_eventThrottling="enqueue" _receivedController_eventThrottling="enqueue" _receivedPitchBend_eventThrottling="enqueue"];
+RenderLayersToWindow [type="vuo.layer.render.window" version="2.4.0" label="Render Layers to Window|<refresh>refresh\l|<layers>layers\l|<multisampling>multisampling\l|<setWindowProperties>setWindowProperties\l|<showedWindow>showedWindow\r|<requestedFrame>requestedFrame\r|<renderedLayers>renderedLayers\r" pos="1860,285" _multisampling="\"4\"" _showedWindow_eventThrottling="enqueue" _requestedFrame_eventThrottling="drop"];
+Scale5 [type="vuo.math.scale.VuoReal" version="2.0.0" label="Scale|<refresh>refresh\l|<value>value\l|<start>start\l|<end>end\l|<scaledStart>scaledStart\l|<scaledEnd>scaledEnd\l|<limitToRange>limitToRange\l|<scaledValue>scaledValue\r" pos="1125,780" _start="0." _end="127" _scaledStart="0.20000000000000001" _scaledEnd="1" _limitToRange="true"];
+Scale6 [type="vuo.math.scale.VuoReal" version="2.0.0" label="Scale|<refresh>refresh\l|<value>value\l|<start>start\l|<end>end\l|<scaledStart>scaledStart\l|<scaledEnd>scaledEnd\l|<limitToRange>limitToRange\l|<scaledValue>scaledValue\r" pos="915,405" _start="1" _end="13" _scaledStart="1" _scaledEnd="0" _limitToRange="false"];
+Scale7 [type="vuo.math.scale.VuoReal" version="2.0.0" label="Scale|<refresh>refresh\l|<value>value\l|<start>start\l|<end>end\l|<scaledStart>scaledStart\l|<scaledEnd>scaledEnd\l|<limitToRange>limitToRange\l|<scaledValue>scaledValue\r" pos="915,540" _start="1" _end="145" _scaledStart="0.80000000000000004" _scaledEnd="0.29999999999999999" _limitToRange="true"];
+TrackNotes [type="vuo.midi.track.note.poly" version="1.0.0" label="Track Notes|<refresh>refresh\l|<note>note\l|<channel>channel\l|<noteNumberMin>noteNumberMin\l|<noteNumberMax>noteNumberMax\l|<reset>reset\l|<notes>notes\r|<noteNumbers>noteNumbers\r|<velocities>velocities\r" pos="315,285" fillcolor="cyan" _channel="1" _noteNumberMin="0" _noteNumberMax="127"];
+
+AllowFirstEvent3:firstEvent -> HoldList2:refresh;
+ConvertIntegerToRealNumber2:real -> Scale7:value;
+ConvertIntegerToRealNumber3:real -> Scale6:value;
+ConvertIntegerToRealNumber:real -> Scale5:value;
+FireOnStart:started -> MakePointsAlongLine2:refresh;
+GetItemFromList2:item -> MakeOvalLayer:center;
+GetNoteValues:noteNumber -> ConvertIntegerToRealNumber2:integer;
+GetNoteValues:noteNumber -> ConvertIntegerToRealNumber3:integer;
+GetNoteValues:noteNumber -> GetItemFromList2:which;
+GetNoteValues:velocity -> ConvertIntegerToRealNumber:integer;
+HoldList2:heldValue -> GetItemFromList2:list;
+MakeHSLColor3:color -> MakeOvalLayer:color;
+MakeList2:list -> CombineLayers2:layers;
+MakeList5:list -> HoldList2:initialValue;
+MakeList:list -> RenderLayersToWindow:setWindowProperties;
+MakeOvalLayer:layer -> ProcessList2:processedItem;
+MakePointsAlongLine2:points -> HoldList2:newValue;
+ProcessList2:processItem -> AllowFirstEvent3:event;
+ProcessList2:processItem -> GetNoteValues:note;
+ProcessList2:processedList -> RenderLayersToWindow:layers;
+ReceiveMIDIEvents:receivedNote -> TrackNotes:note;
+Scale5:scaledValue -> MakeOvalLayer:sharpness;
+Scale6:scaledValue -> MakeHSLColor3:hue;
+Scale7:scaledValue -> MakeHSLColor3:lightness;
+TrackNotes:notes -> ProcessList2:fire;
+}
