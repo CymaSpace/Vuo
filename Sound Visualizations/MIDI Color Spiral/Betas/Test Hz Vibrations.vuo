@@ -10,11 +10,12 @@ digraph G
 {
 ArrangeLayersInRow2 [type="vuo.layer.arrange.row" version="1.0.0" label="Arrange Layers in Row|<refresh>refresh\l|<layers>layers\l|<renderedLayers>renderedLayers\l|<verticalAlignment>verticalAlignment\l|<anchor>anchor\l|<position>position\l|<spacing>spacing\l|<arrangedLayer>arrangedLayer\r" pos="1020,465" _verticalAlignment="\"center\"" _anchor="{\"horizontalAlignment\":\"center\",\"verticalAlignment\":\"center\"}" _position="{\"x\":0,\"y\":0}" _spacing="0"];
 Calculate2 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="285,360" _expression="{\"expressions\":[\"1\\/20\"],\"inputVariables\":[],\"outputVariables\":[\"result\"]}"];
-Calculate3 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="285,555" _expression="{\"expressions\":[\"1\\/30\"],\"inputVariables\":[],\"outputVariables\":[\"result\"]}"];
+Calculate3 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="285,555" _expression="{\"expressions\":[\"1\\/20\"],\"inputVariables\":[],\"outputVariables\":[\"result\"]}"];
 Calculate4 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="285,750" _expression="{\"expressions\":[\"1\\/50\"],\"inputVariables\":[],\"outputVariables\":[\"result\"]}"];
 ConvertRealTo2DPoint [type="vuo.type.real.point2d.y" version="1.0.1" label="Convert Real to 2D Point|<refresh>refresh\l|<y>y\l|<point2d>point2d\r" pos="840,435"];
 ConvertRealTo2DPoint2 [type="vuo.type.real.point2d.y" version="1.0.1" label="Convert Real to 2D Point|<refresh>refresh\l|<y>y\l|<point2d>point2d\r" pos="840,585"];
 ConvertRealTo2DPoint3 [type="vuo.type.real.point2d.y" version="1.0.1" label="Convert Real to 2D Point|<refresh>refresh\l|<y>y\l|<point2d>point2d\r" pos="840,780"];
+Curve2 [type="vuo.motion.curve.VuoReal" version="2.0.0" label="Curve|<refresh>refresh\l|<time>time\l|<startPosition>startPosition\l|<endPosition>endPosition\l|<duration>duration\l|<curve>curve\l|<easing>easing\l|<loop>loop\l|<phase>phase\l|<value>value\r" pos="330,165" _startPosition="0.025000000000000001" _endPosition="0" _duration="1." _curve="\"quadratic\"" _easing="\"in\"" _loop="\"loop\"" _phase="0.0"];
 FireOnStart2 [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="60,435" _started_eventThrottling="enqueue"];
 MakeDictionary6 [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="240,570"];
 MakeDictionary7 [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="225,765"];
@@ -32,9 +33,9 @@ MakeOvalLayer [type="vuo.layer.make.oval" version="1.1.0" label="Make Oval Layer
 MakeOvalLayer2 [type="vuo.layer.make.oval" version="1.1.0" label="Make Oval Layer|<refresh>refresh\l|<name>name\l|<color>color\l|<anchor>anchor\l|<center>center\l|<rotation>rotation\l|<width>width\l|<height>height\l|<sharpness>sharpness\l|<layer>layer\r" pos="735,480" _color="{\"r\":1,\"g\":0,\"b\":0.50196081399917603,\"a\":1}" _anchor="{\"horizontalAlignment\":\"left\",\"verticalAlignment\":\"center\"}" _rotation="0.0" _width="0.20000000000000001" _height="0.20000000000000001" _sharpness="1.0"];
 MakeOvalLayer3 [type="vuo.layer.make.oval" version="1.1.0" label="Make Oval Layer|<refresh>refresh\l|<name>name\l|<color>color\l|<anchor>anchor\l|<center>center\l|<rotation>rotation\l|<width>width\l|<height>height\l|<sharpness>sharpness\l|<layer>layer\r" pos="735,675" _color="{\"r\":0,\"g\":0.50196081399917603,\"b\":1,\"a\":1}" _anchor="{\"horizontalAlignment\":\"left\",\"verticalAlignment\":\"center\"}" _rotation="0.0" _width="0.20000000000000001" _height="0.20000000000000001" _sharpness="1.0"];
 RenderLayersToWindow2 [type="vuo.layer.render.window" version="2.4.0" label="Render Layers to Window|<refresh>refresh\l|<layers>layers\l|<multisampling>multisampling\l|<setWindowProperties>setWindowProperties\l|<showedWindow>showedWindow\r|<requestedFrame>requestedFrame\r|<renderedLayers>renderedLayers\r" pos="1320,465" _multisampling="\"4\"" _showedWindow_eventThrottling="enqueue" _requestedFrame_eventThrottling="drop"];
-Wave [type="vuo.motion.wave" version="2.0.0" label="Wave|<refresh>refresh\l|<time>time\l|<wave>wave\l|<period>period\l|<center>center\l|<amplitude>amplitude\l|<phase>phase\l|<value>value\r" pos="495,330" _wave="\"triangle\"" _center="0.0" _amplitude="0.10000000000000001" _phase="0.0"];
-Wave2 [type="vuo.motion.wave" version="2.0.0" label="Wave|<refresh>refresh\l|<time>time\l|<wave>wave\l|<period>period\l|<center>center\l|<amplitude>amplitude\l|<phase>phase\l|<value>value\r" pos="495,525" _wave="\"triangle\"" _center="0.0" _amplitude="0.10000000000000001" _phase="0.0"];
-Wave3 [type="vuo.motion.wave" version="2.0.0" label="Wave|<refresh>refresh\l|<time>time\l|<wave>wave\l|<period>period\l|<center>center\l|<amplitude>amplitude\l|<phase>phase\l|<value>value\r" pos="495,720" _wave="\"triangle\"" _center="0.0" _amplitude="0.10000000000000001" _phase="0.0"];
+Wave [type="vuo.motion.wave" version="2.0.0" label="Wave|<refresh>refresh\l|<time>time\l|<wave>wave\l|<period>period\l|<center>center\l|<amplitude>amplitude\l|<phase>phase\l|<value>value\r" pos="495,330" _wave="\"sine\"" _center="0.0" _phase="0.0"];
+Wave2 [type="vuo.motion.wave" version="2.0.0" label="Wave|<refresh>refresh\l|<time>time\l|<wave>wave\l|<period>period\l|<center>center\l|<amplitude>amplitude\l|<phase>phase\l|<value>value\r" pos="495,525" _wave="\"sine\"" _center="0.0" _phase="0.0"];
+Wave3 [type="vuo.motion.wave" version="2.0.0" label="Wave|<refresh>refresh\l|<time>time\l|<wave>wave\l|<period>period\l|<center>center\l|<amplitude>amplitude\l|<phase>phase\l|<value>value\r" pos="495,720" _wave="\"sine\"" _center="0.0" _phase="0.0"];
 
 ArrangeLayersInRow2:arrangedLayer -> MakeList28:1;
 Calculate2:result -> Wave:period;
@@ -43,6 +44,9 @@ Calculate4:result -> Wave3:period;
 ConvertRealTo2DPoint2:point2d -> MakeOvalLayer2:center;
 ConvertRealTo2DPoint3:point2d -> MakeOvalLayer3:center;
 ConvertRealTo2DPoint:point2d -> MakeOvalLayer:center;
+Curve2:value -> Wave2:amplitude;
+Curve2:value -> Wave3:amplitude;
+Curve2:value -> Wave:amplitude;
 FireOnStart2:started -> Calculate2:refresh;
 FireOnStart2:started -> Calculate3:refresh;
 FireOnStart2:started -> Calculate4:refresh;
@@ -61,6 +65,7 @@ MakeList9:list -> RenderLayersToWindow2:setWindowProperties;
 MakeOvalLayer2:layer -> MakeList29:2;
 MakeOvalLayer3:layer -> MakeList29:3;
 MakeOvalLayer:layer -> MakeList29:1;
+RenderLayersToWindow2:requestedFrame -> Curve2:time;
 RenderLayersToWindow2:requestedFrame -> Wave2:time;
 RenderLayersToWindow2:requestedFrame -> Wave3:time;
 RenderLayersToWindow2:requestedFrame -> Wave:time;
