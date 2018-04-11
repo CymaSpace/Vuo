@@ -1,0 +1,20 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright © 2018 [Bodysoulspirit](https://vuo.org/user/2475)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+ConvertNoteToFrequency [type="vuo.midi.note.frequency" version="2.0.0" label="Convert Note to Frequency|<refresh>refresh\l|<noteNumber>noteNumber\l|<pitchBend>pitchBend\l|<pitchBendRange>pitchBendRange\l|<frequency>frequency\r" pos="555,255" _pitchBend="8192" _pitchBendRange="2"];
+ProcessList [type="vuo.list.process.VuoInteger.VuoReal" version="1.0.1" label="Process List|<refresh>refresh\l|<fire>fire\l|<processedItem>processedItem\l|<processedList>processedList\r|<processItem>processItem\r" pos="570,150" _processedList_eventThrottling="enqueue" _processItem_eventThrottling="enqueue"];
+ReceiveMIDIEvents [type="vuo.midi.receive" version="2.1.1" label="Receive MIDI Events|<refresh>refresh\l|<device>device\l|<receivedNote>receivedNote\r|<receivedController>receivedController\r|<receivedPitchBend>receivedPitchBend\r" pos="120,135" _device="{\"id\":-1,\"name\":\"R�seau Macbook Midi Wifi\"}" _receivedNote_eventThrottling="enqueue" _receivedController_eventThrottling="enqueue" _receivedPitchBend_eventThrottling="enqueue"];
+TrackNotes [type="vuo.midi.track.note.poly" version="1.0.0" label="Track Notes|<refresh>refresh\l|<note>note\l|<channel>channel\l|<noteNumberMin>noteNumberMin\l|<noteNumberMax>noteNumberMax\l|<reset>reset\l|<notes>notes\r|<noteNumbers>noteNumbers\r|<velocities>velocities\r" pos="345,135" _channel="1" _noteNumberMin="0" _noteNumberMax="127"];
+
+ConvertNoteToFrequency:frequency -> ProcessList:processedItem;
+ProcessList:processItem -> ConvertNoteToFrequency:noteNumber;
+ReceiveMIDIEvents:receivedNote -> TrackNotes:note;
+TrackNotes:noteNumbers -> ProcessList:fire;
+}
