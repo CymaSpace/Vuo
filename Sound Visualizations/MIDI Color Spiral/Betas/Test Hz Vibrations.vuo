@@ -9,8 +9,8 @@
 digraph G
 {
 ArrangeLayersInRow2 [type="vuo.layer.arrange.row" version="1.0.0" label="Arrange Layers in Row|<refresh>refresh\l|<layers>layers\l|<renderedLayers>renderedLayers\l|<verticalAlignment>verticalAlignment\l|<anchor>anchor\l|<position>position\l|<spacing>spacing\l|<arrangedLayer>arrangedLayer\r" pos="1020,465" _verticalAlignment="\"center\"" _anchor="{\"horizontalAlignment\":\"center\",\"verticalAlignment\":\"center\"}" _position="{\"x\":0,\"y\":0}" _spacing="0"];
-Calculate2 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="285,360" _expression="{\"expressions\":[\"1\\/20\"],\"inputVariables\":[],\"outputVariables\":[\"result\"]}"];
-Calculate3 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="285,555" _expression="{\"expressions\":[\"1\\/20\"],\"inputVariables\":[],\"outputVariables\":[\"result\"]}"];
+Calculate2 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="285,360" _expression="{\"expressions\":[\"1\\/10\"],\"inputVariables\":[],\"outputVariables\":[\"result\"]}"];
+Calculate3 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="285,555" _expression="{\"expressions\":[\"1\\/25\"],\"inputVariables\":[],\"outputVariables\":[\"result\"]}"];
 Calculate4 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="285,750" _expression="{\"expressions\":[\"1\\/50\"],\"inputVariables\":[],\"outputVariables\":[\"result\"]}"];
 ConvertRealTo2DPoint [type="vuo.type.real.point2d.y" version="1.0.1" label="Convert Real to 2D Point|<refresh>refresh\l|<y>y\l|<point2d>point2d\r" pos="840,435"];
 ConvertRealTo2DPoint2 [type="vuo.type.real.point2d.y" version="1.0.1" label="Convert Real to 2D Point|<refresh>refresh\l|<y>y\l|<point2d>point2d\r" pos="840,585"];
