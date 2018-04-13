@@ -1,0 +1,86 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright Â© 2018 [Bodysoulspirit](https://vuo.org/user/2475)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+AddLists3 [type="vuo.math.add.list.2.VuoPoint2d" version="1.0.0" label="Add Lists|<refresh>refresh\l|<list1>list1\l|<list2>list2\l|<summedList>summedList\r" pos="1695,1140"];
+CalculateList2 [type="vuo.math.calculate.list" version="1.1.0" label="Calculate List|<refresh>refresh\l|<expression>expression\l|<xValues>xValues\l|<values>values\l|<results>results\r" pos="945,1245" _expression="{\"expressions\":[\"mix(0,MaxSizeK,(abs(sin((t*(x*100))))))\"],\"inputVariables\":[\"MaxSizeK\",\"t\",\"x\"],\"outputVariables\":[\"result\"]}"];
+CalculateList3 [type="vuo.math.calculate.list" version="1.1.0" label="Calculate List|<refresh>refresh\l|<expression>expression\l|<xValues>xValues\l|<values>values\l|<results>results\r" pos="945,1380" _expression="{\"expressions\":[\"x\\/127\"],\"inputVariables\":[\"x\"],\"outputVariables\":[\"result\"]}"];
+ChangeItemsInList2 [type="Magneson.ListTools.ChangeItemsInList.VuoReal" version="1.0.0" label="Change Items in List|<refresh>refresh\l|<list>list\l|<changeItems>changeItems\l|<newItem>newItem\l|<listOut>listOut\r" pos="1320,1215"];
+ConvertIntegerListToRealList2 [type="vuo.type.list.integer.real" version="1.0.1" label="Convert Integer List to Real List|<refresh>refresh\l|<integers>integers\l|<reals>reals\r" pos="1050,1560"];
+ConvertNoteToFrequency3 [type="vuo.midi.note.frequency" version="2.0.0" label="Convert Note to Frequency|<refresh>refresh\l|<noteNumber>noteNumber\l|<pitchBend>pitchBend\l|<pitchBendRange>pitchBendRange\l|<frequency>frequency\r" pos="555,1155" _pitchBend="8192" _pitchBendRange="2"];
+ConvertRealListTo2DPointList [type="vuo.type.list.real.point2d.xy" version="1.0.0" label="Convert Real List to 2D Point List|<refresh>refresh\l|<x>x\l|<point2d>point2d\r" pos="2625,1065"];
+CopyLayer [type="vuo.layer.copy.trs" version="2.0.1" label="Copy Layer|<refresh>refresh\l|<layer>layer\l|<translations>translations\l|<rotations>rotations\l|<scales>scales\l|<copies>copies\r" pos="1965,975"];
+CopyListItems2 [type="vuo.list.spread.VuoReal" version="1.0.1" label="Copy List Items|<refresh>refresh\l|<list>list\l|<copies>copies\l|<outputList>outputList\r" pos="960,1140" _copies="144"];
+CopyListItems4 [type="vuo.list.spread.VuoPoint2d" version="1.0.1" label="Copy List Items|<refresh>refresh\l|<list>list\l|<copies>copies\l|<outputList>outputList\r" pos="1410,1140" _copies="144"];
+FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="90,975" _started_eventThrottling="enqueue"];
+IsListPopulated5 [type="vuo.list.populated.VuoInteger" version="1.0.0" label="Is List Populated|<refresh>refresh\l|<list>list\l|<populated>populated\r" pos="1740,1470"];
+MakeDictionary [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="720,1432"];
+MakeDictionary4 [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="720,1290"];
+MakeList [type="vuo.list.make.2.VuoLayer" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="2139,986"];
+MakeList10 [type="vuo.list.make.0.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<list>list\r" pos="904,1421"];
+MakeList11 [type="vuo.list.make.2.VuoWindowProperty" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="2189,1016"];
+MakeList12 [type="vuo.list.make.0.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<list>list\r" pos="720,1432"];
+MakeList13 [type="vuo.list.make.2.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="863,1286" _1="30"];
+MakeList14 [type="vuo.list.make.2.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="720,1290" _1="\"MaxSizeK\"" _2="\"t\""];
+MakeList15 [type="vuo.list.make.1.VuoPoint2d" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<list>list\r" pos="1345,1151" _1="{\"x\":1,\"y\":1}"];
+MakeList21 [type="vuo.list.make.2.VuoPoint2d" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="1562,1226"];
+MakeList28 [type="vuo.list.make.2.VuoPoint2d" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="1634,1241"];
+MakeList29 [type="vuo.list.make.1.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<list>list\r" pos="895,1151" _1="0"];
+MakeList7 [type="vuo.list.make.1.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<list>list\r" pos="1919,1016" _1="0"];
+MakeOvalLayer [type="vuo.layer.make.oval" version="1.1.0" label="Make Oval Layer|<refresh>refresh\l|<name>name\l|<color>color\l|<anchor>anchor\l|<center>center\l|<rotation>rotation\l|<width>width\l|<height>height\l|<sharpness>sharpness\l|<layer>layer\r" pos="1680,795" _color="{\"r\":1,\"g\":1,\"b\":1,\"a\":0.50000762939453125}" _anchor="{\"horizontalAlignment\":\"center\",\"verticalAlignment\":\"center\"}" _center="{\"x\":0.0,\"y\":0.0}" _rotation="0.0" _width="0.010666666666666668" _height="0.010666666666666668" _sharpness="1.0"];
+MakePointsAlongLine2 [type="vuo.point.make.curve.VuoPoint2d" version="1.0.0" label="Make Points along Line|<refresh>refresh\l|<startPosition>startPosition\l|<endPosition>endPosition\l|<curve>curve\l|<easing>easing\l|<numberOfPoints>numberOfPoints\l|<points>points\r" pos="1635,990" _startPosition="{\"x\":-0.80000001192092896,\"y\":0}" _endPosition="{\"x\":0.80000001192092896,\"y\":0}" _curve="\"linear\"" _easing="\"in\"" _numberOfPoints="144"];
+MultiplyLists2 [type="vuo.math.multiply.list.2.VuoPoint2d" version="1.0.0" label="Multiply Lists|<refresh>refresh\l|<list1>list1\l|<list2>list2\l|<productList>productList\r" pos="1680,1215"];
+MultiplyLists3 [type="vuo.math.multiply.list.2.VuoReal" version="1.0.0" label="Multiply Lists|<refresh>refresh\l|<list1>list1\l|<list2>list2\l|<productList>productList\r" pos="1140,1320"];
+ProcessList4 [type="vuo.list.process.VuoInteger.VuoReal" version="1.0.1" label="Process List|<refresh>refresh\l|<fire>fire\l|<processedItem>processedItem\l|<processedList>processedList\r|<processItem>processItem\r" pos="570,1080" _processedList_eventThrottling="enqueue" _processItem_eventThrottling="enqueue"];
+ReceiveMIDIEvents [type="vuo.midi.receive" version="2.1.1" label="Receive MIDI Events|<refresh>refresh\l|<device>device\l|<receivedNote>receivedNote\r|<receivedController>receivedController\r|<receivedPitchBend>receivedPitchBend\r" pos="60,1110" _device="{\"id\":-1,\"name\":\"RŽseau Macbook Midi Wifi\"}" _receivedNote_eventThrottling="enqueue" _receivedController_eventThrottling="enqueue" _receivedPitchBend_eventThrottling="enqueue"];
+RenderLayersToWindow [type="vuo.layer.render.window" version="2.4.0" label="Render Layers to Window|<refresh>refresh\l|<layers>layers\l|<multisampling>multisampling\l|<setWindowProperties>setWindowProperties\l|<showedWindow>showedWindow\r|<requestedFrame>requestedFrame\r|<renderedLayers>renderedLayers\r" pos="2235,975" _multisampling="\"2\"" _showedWindow_eventThrottling="enqueue" _requestedFrame_eventThrottling="drop"];
+SelectInput3 [type="vuo.select.in.boolean.VuoReal" version="2.0.0" label="Select Input|<refresh>refresh\l|<which>which\l|<falseOption>falseOption\l|<trueOption>trueOption\l|<out>out\r" pos="630,1290"];
+TrackNotes [type="vuo.midi.track.note.poly" version="1.0.0" label="Track Notes|<refresh>refresh\l|<note>note\l|<channel>channel\l|<noteNumberMin>noteNumberMin\l|<noteNumberMax>noteNumberMax\l|<reset>reset\l|<notes>notes\r|<noteNumbers>noteNumbers\r|<velocities>velocities\r" pos="285,1110" _channel="1" _noteNumberMin="0" _noteNumberMax="144"];
+
+AddLists3:summedList -> CopyLayer:scales;
+CalculateList2:results -> MultiplyLists3:list1;
+CalculateList3:results -> MultiplyLists3:list2;
+ChangeItemsInList2:listOut -> ConvertRealListTo2DPointList:x;
+ConvertIntegerListToRealList2:reals -> CalculateList3:xValues;
+ConvertNoteToFrequency3:frequency -> ProcessList4:processedItem;
+ConvertRealListTo2DPointList:point2d -> AddLists3:list2;
+CopyLayer:copies -> MakeList:1;
+CopyListItems2:outputList -> ChangeItemsInList2:list;
+CopyListItems4:outputList -> AddLists3:list1;
+FireOnStart:started -> CopyListItems2:refresh;
+FireOnStart:started -> CopyListItems4:refresh;
+FireOnStart:started -> MakeOvalLayer:refresh;
+FireOnStart:started -> MakePointsAlongLine2:refresh;
+IsListPopulated5:populated -> SelectInput3:which;
+MakeDictionary4:dictionary -> CalculateList2:values;
+MakeDictionary:dictionary -> CalculateList3:values;
+MakeList10:list -> MakeDictionary:values;
+MakeList11:list -> RenderLayersToWindow:setWindowProperties;
+MakeList12:list -> MakeDictionary:keys;
+MakeList13:list -> MakeDictionary4:values;
+MakeList14:list -> MakeDictionary4:keys;
+MakeList15:list -> CopyListItems4:list;
+MakeList21:list -> MultiplyLists2:list1;
+MakeList28:list -> MultiplyLists2:list2;
+MakeList29:list -> CopyListItems2:list;
+MakeList7:list -> CopyLayer:rotations;
+MakeList:list -> RenderLayersToWindow:layers;
+MakeOvalLayer:layer -> CopyLayer:layer;
+MakePointsAlongLine2:points -> CopyLayer:translations;
+MultiplyLists3:productList -> ChangeItemsInList2:newItem;
+ProcessList4:processItem -> ConvertNoteToFrequency3:noteNumber;
+ProcessList4:processedList -> CalculateList2:xValues;
+ReceiveMIDIEvents:receivedNote -> TrackNotes:note;
+RenderLayersToWindow:requestedFrame -> SelectInput3:trueOption;
+SelectInput3:out -> MakeList13:2;
+TrackNotes:noteNumbers -> ChangeItemsInList2:changeItems;
+TrackNotes:noteNumbers -> IsListPopulated5:list;
+TrackNotes:noteNumbers -> ProcessList4:fire;
+TrackNotes:velocities -> ConvertIntegerListToRealList2:integers;
+}
