@@ -32,7 +32,7 @@ ConvertRealListToIntegerList2 [type="vuo.type.list.real.integer" version="1.0.1"
 ConvertRealListToIntegerList4 [type="vuo.type.list.real.integer" version="1.0.1" label="Convert Real List to Integer List|<refresh>refresh\l|<reals>reals\l|<integers>integers\r" pos="2085,450"];
 ConvertRealListToTextList2 [type="vuo.type.list.real.text" version="1.0.0" label="Convert Real List to Text List|<refresh>refresh\l|<reals>reals\l|<texts>texts\r" pos="-555,1290"];
 ConvertTextListToRealList2 [type="vuo.type.list.text.real" version="1.0.0" label="Convert Text List to Real List|<refresh>refresh\l|<texts>texts\l|<reals>reals\r" pos="1395,720" fillcolor="cyan"];
-CopyListItemGroups2 [type="vuo.list.spread.group.VuoText" version="1.0.1" label="Copy List Item Groups|<refresh>refresh\l|<list>list\l|<copies>copies\l|<itemsPerGroup>itemsPerGroup\l|<outputList>outputList\r" pos="960,1095" fillcolor="blue" _copies="12" _itemsPerGroup="12"];
+CopyListItemGroups3 [type="vuo.list.spread.group.VuoText" version="1.0.1" label="Copy List Item Groups|<refresh>refresh\l|<list>list\l|<copies>copies\l|<itemsPerGroup>itemsPerGroup\l|<outputList>outputList\r" pos="960,1095" fillcolor="blue" _copies="12" _itemsPerGroup="12"];
 Divide [type="vuo.math.divide.VuoReal" version="2.0.0" label="Divide|<refresh>refresh\l|<a>a\l|<b>b\l|<quotient>quotient\r" pos="1185,150" fillcolor="magenta" _b="1.365"];
 FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="-1095,210" fillcolor="yellow" _started_eventThrottling="enqueue"];
 GetItemFromList2 [type="vuo.list.get.VuoPoint3d" version="1.0.1" label="Get Item from List|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="1185,45" fillcolor="magenta"];
@@ -56,7 +56,7 @@ MakeList12 [type="vuo.list.make.0.VuoReal" version="2.0.0" label="Make List|<ref
 MakeList13 [type="vuo.list.make.2.VuoLayer" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="2784,341"];
 MakeList15 [type="vuo.list.make.0.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<list>list\r" pos="1669,1391" fillcolor="tangerine"];
 MakeList18 [type="vuo.list.make.0.VuoPoint3d" version="2.0.0" label="Make List|<refresh>refresh\l|<list>list\r" pos="754,1391" fillcolor="blue"];
-MakeList20 [type="vuo.list.make.12.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<4>4\l|<5>5\l|<6>6\l|<7>7\l|<8>8\l|<9>9\l|<10>10\l|<11>11\l|<12>12\l|<list>list\r" pos="894,1106" fillcolor="blue" _1="\"C\"" _2="\"F\"" _3="\"Bb\"" _4="\"Eb\"" _5="\"Ab\"" _6="\"C#\"" _7="\"F#\"" _8="\"B\"" _9="\"E\"" _10="\"A\"" _11="\"D\"" _12="\"G\""];
+MakeList2 [type="vuo.list.make.12.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<4>4\l|<5>5\l|<6>6\l|<7>7\l|<8>8\l|<9>9\l|<10>10\l|<11>11\l|<12>12\l|<list>list\r" pos="894,1106" fillcolor="blue" _1="\"C\"" _2="\"F\"" _3="\"Bb\"" _4="\"Eb\"" _5="\"Ab\"" _6="\"Dd\"" _7="\"Gb\"" _8="\"B\"" _9="\"E\"" _10="\"A\"" _11="\"D\"" _12="\"G\""];
 MakeList4 [type="vuo.list.make.0.VuoPoint3d" version="2.0.0" label="Make List|<refresh>refresh\l|<list>list\r" pos="754,56" fillcolor="magenta"];
 MakeOvalLayer [type="vuo.layer.make.oval" version="1.1.0" label="Make Oval Layer|<refresh>refresh\l|<name>name\l|<color>color\l|<anchor>anchor\l|<center>center\l|<rotation>rotation\l|<width>width\l|<height>height\l|<sharpness>sharpness\l|<layer>layer\r" pos="1470,435" fillcolor="violet" _anchor="{\"horizontalAlignment\":\"center\",\"verticalAlignment\":\"center\"}" _rotation="0.0" _sharpness="1"];
 MakeOvalLayer2 [type="vuo.layer.make.oval" version="1.1.0" label="Make Oval Layer|<refresh>refresh\l|<name>name\l|<color>color\l|<anchor>anchor\l|<center>center\l|<rotation>rotation\l|<width>width\l|<height>height\l|<sharpness>sharpness\l|<layer>layer\r" pos="1470,0" fillcolor="magenta" _anchor="{\"horizontalAlignment\":\"center\",\"verticalAlignment\":\"center\"}" _rotation="0.0" _sharpness="1.0"];
@@ -92,7 +92,7 @@ TrackNotes6 [type="vuo.midi.track.note.poly" version="1.0.0" label="Track Notes|
 
 AllowFirstEvent2:firstEvent -> HoldList2:refresh;
 AllowFirstEvent2:firstEvent -> HoldList6:refresh;
-AllowFirstEvent:firstEvent -> CopyListItemGroups2:refresh;
+AllowFirstEvent:firstEvent -> CopyListItemGroups3:refresh;
 AllowFirstEvent:firstEvent -> HoldList5:refresh;
 AllowFirstEvent:firstEvent -> MakePointsAlongLine2:refresh;
 AppendLists2:combinedList -> AppendLists4:list1;
@@ -129,7 +129,7 @@ ConvertRealListToTextList2:texts -> GetItemsFromDictionary:keys;
 ConvertTextListToRealList2:reals -> ConvertRealListToIntegerList4:reals;
 ConvertTextListToRealList2:reals -> ConvertRealListToIntegerList:reals;
 ConvertTextListToRealList2:reals -> SelectInputList2:falseOption;
-CopyListItemGroups2:outputList -> GetItemFromList3:list;
+CopyListItemGroups3:outputList -> GetItemFromList3:list;
 Divide:quotient -> MakeOvalLayer2:height;
 Divide:quotient -> MakeOvalLayer2:width;
 Divide:quotient -> MakeOvalLayer:height;
@@ -161,7 +161,7 @@ MakeList12:list -> HoldList6:initialValue;
 MakeList13:list -> RenderLayersToWindow:layers;
 MakeList15:list -> SelectInputList2:trueOption;
 MakeList18:list -> HoldList5:initialValue;
-MakeList20:list -> CopyListItemGroups2:list;
+MakeList2:list -> CopyListItemGroups3:list;
 MakeList4:list -> HoldList2:initialValue;
 MakeList:list -> RenderLayersToWindow:setWindowProperties;
 MakeOvalLayer2:layer -> BuildList2:builtItem;
