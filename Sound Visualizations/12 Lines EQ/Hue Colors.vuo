@@ -1,0 +1,70 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright © 2018 [Bodysoulspirit](https://vuo.org/user/2475)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+AdjustLoudness [type="vuo.audio.loudness" version="2.0.0" label="Adjust Loudness|<refresh>refresh\l|<samples>samples\l|<loudness>loudness\l|<adjustedSamples>adjustedSamples\r" pos="630,525" fillcolor="orange" _loudness="2"];
+CalculateAmplitudeForFrequencies [type="vuo.audio.analyze.fft2" version="2.0.1" label="Calculate Amplitude for Frequencies|<refresh>refresh\l|<samples>samples\l|<frequencyBins>frequencyBins\l|<frequencyBinAveraging>frequencyBinAveraging\l|<amplitudes>amplitudes\r" pos="930,525" fillcolor="orange" _frequencyBins="\"255\"" _frequencyBinAveraging="\"quadratic\""];
+CalculateList [type="vuo.math.calculate.list" version="1.1.0" label="Calculate List|<refresh>refresh\l|<expression>expression\l|<xValues>xValues\l|<values>values\l|<results>results\r" pos="1050,705" _expression="\{\"expressions\":[\"clamp(x,0.15,1)\"],\"inputVariables\":[\"x\"],\"outputVariables\":[\"result\"]\}"];
+Convert3DPointListTo2DPointList [type="vuo.type.list.point3d.point2d.xy" version="1.0.2" label="Convert 3D Point List to 2D Point List|<refresh>refresh\l|<xyz>xyz\l|<xy>xy\r" pos="1725,465"];
+Convert3DPointListTo2DPointList4 [type="vuo.type.list.point3d.point2d.xy" version="1.0.2" label="Convert 3D Point List to 2D Point List|<refresh>refresh\l|<xyz>xyz\l|<xy>xy\r" pos="1680,450"];
+ConvertRealListTo3DPointList [type="vuo.type.list.real.point3d.xyz" version="1.0.0" label="Convert Real List to 3D Point List|<refresh>refresh\l|<x>x\l|<point3d>point3d\r" pos="1470,480"];
+Curve3 [type="vuo.motion.curve.VuoReal" version="2.0.0" label="Curve|<refresh>refresh\l|<time>time\l|<startPosition>startPosition\l|<endPosition>endPosition\l|<duration>duration\l|<curve>curve\l|<easing>easing\l|<loop>loop\l|<phase>phase\l|<value>value\r" pos="1335,660" _endPosition="1." _duration="12" _curve="\"linear\"" _easing="\"in\"" _loop="\"loop\"" _phase="0"];
+CutList2 [type="vuo.list.cut.VuoReal" version="1.0.1" label="Cut List|<refresh>refresh\l|<list>list\l|<startPosition>startPosition\l|<itemCount>itemCount\l|<partialList>partialList\r" pos="1095,615" _startPosition="1" _itemCount="12"];
+FireOnStart [type="vuo.event.fireOnStart" version="1.0.0" label="Fire on Start|<refresh>refresh\l|<started>started\r" pos="645,270" fillcolor="yellow" _started_eventThrottling="enqueue"];
+HoldList2 [type="vuo.data.hold.list.VuoAudioSamples" version="1.0.0" label="Hold List|<refresh>refresh\l|<initialValue>initialValue\l|<newValue>newValue\l|<heldValue>heldValue\r" pos="660,435" fillcolor="orange"];
+InterleaveLists2 [type="vuo.list.interleave.VuoPoint2d" version="1.0.0" label="Interleave Zeros|<refresh>refresh\l|<list1>list1\l|<list2>list2\l|<interleavedList>interleavedList\r" pos="1560,345"];
+Make3DObject [type="vuo.scene.make" version="2.0.0" label="White EQ|<refresh>refresh\l|<mesh>mesh\l|<shader>shader\l|<transform>transform\l|<object>object\r" pos="1935,360" _transform="\{\"translation\":[0,0,0],\"eulerRotation\":[0,0,3.1415927410125732],\"scale\":[1,1,1]\}"];
+MakeDictionary4 [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="825,750"];
+MakeHSLColor2 [type="vuo.color.make.hsl" version="2.0.0" label="Make HSL Color|<refresh>refresh\l|<hue>hue\l|<saturation>saturation\l|<lightness>lightness\l|<opacity>opacity\l|<color>color\r" pos="1500,660" _saturation="1.0" _lightness="0.5" _opacity="1.0"];
+MakeLineMesh2 [type="vuo.mesh.make.lines.VuoPoint2d" version="2.1.0" label="Make Line Mesh|<refresh>refresh\l|<positions>positions\l|<lineWidth>lineWidth\l|<mesh>mesh\r" pos="1740,345" _lineWidth="0.02"];
+MakeList10 [type="vuo.list.make.0.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<list>list\r" pos="1009,746"];
+MakeList11 [type="vuo.list.make.0.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<list>list\r" pos="825,750"];
+MakeList6 [type="vuo.list.make.2.VuoWindowProperty" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="2339,341"];
+MakeList7 [type="vuo.list.make.1.VuoSceneObject" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<list>list\r" pos="2289,296"];
+MakeList8 [type="vuo.list.make.1.VuoAudioSamples" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<list>list\r" pos="614,446" fillcolor="orange"];
+MakeParametricPoints [type="vuo.point.make.parametric" version="1.0.1" label="Make Parametric Points|<refresh>refresh\l|<time>time\l|<xExpression>xExpression\l|<yExpression>yExpression\l|<zExpression>zExpression\l|<subdivisions>subdivisions\l|<uMin>uMin\l|<uMax>uMax\l|<points>points\r" pos="1005,360" _time="0.0" _xExpression="\"sin(u)\\/2\"" _yExpression="\"cos(u)\\/2\"" _zExpression="\"0\"" _subdivisions="12" _uMin="0.0" _uMax="330"];
+MakeParametricPoints2 [type="vuo.point.make.parametric" version="1.0.1" label="Make Parametric Points|<refresh>refresh\l|<time>time\l|<xExpression>xExpression\l|<yExpression>yExpression\l|<zExpression>zExpression\l|<subdivisions>subdivisions\l|<uMin>uMin\l|<uMax>uMax\l|<points>points\r" pos="1005,195" _time="0.0" _xExpression="\"sin(u)\\/2\"" _yExpression="\"cos(u)\\/2\"" _zExpression="\"0\"" _subdivisions="12" _uMin="0.0" _uMax="330"];
+MakeUnlitColorShader [type="vuo.shader.make.color.unlit" version="2.0.0" label="Make Unlit Color Shader|<refresh>refresh\l|<color>color\l|<shader>shader\r" pos="1695,450"];
+MixAudioChannels3 [type="vuo.audio.mix" version="2.0.0" label="Mix Audio Channels|<refresh>refresh\l|<samples>samples\l|<mixedSamples>mixedSamples\r" pos="1290,1035"];
+MultiplyLists2 [type="vuo.math.multiply.list.2.VuoPoint3d" version="1.0.0" label="Multiply Lists|<refresh>refresh\l|<list1>list1\l|<list2>list2\l|<productList>productList\r" pos="1305,555"];
+ReceiveLiveAudio [type="vuo.audio.receive" version="1.0.1" label="Receive Live Audio|<refresh>refresh\l|<device>device\l|<receivedChannels>receivedChannels\r" pos="600,375" fillcolor="orange" _receivedChannels_eventThrottling="drop"];
+RenderSceneToWindow [type="vuo.scene.render.window" version="2.3.0" label="Render Scene to Window|<refresh>refresh\l|<objects>objects\l|<cameraName>cameraName\l|<multisampling>multisampling\l|<setWindowProperties>setWindowProperties\l|<showedWindow>showedWindow\r|<requestedFrame>requestedFrame\r" pos="2385,285" _multisampling="\"4\"" _showedWindow_eventThrottling="enqueue" _requestedFrame_eventThrottling="drop"];
+ScaleList2 [type="vuo.math.scale.list.VuoPoint3d" version="1.0.0" label="Scale List|<refresh>refresh\l|<scale>scale\l|<list>list\l|<scaledList>scaledList\r" pos="1335,180" _scale="\{\"x\":0.10000000149011612,\"y\":0.10000000149011612,\"z\":0\}"];
+
+AdjustLoudness:adjustedSamples -> MixAudioChannels3:samples;
+CalculateAmplitudeForFrequencies:amplitudes -> CutList2:list;
+CalculateList:results -> ConvertRealListTo3DPointList:x;
+Convert3DPointListTo2DPointList4:xy -> InterleaveLists2:list1;
+Convert3DPointListTo2DPointList:xy -> InterleaveLists2:list2;
+ConvertRealListTo3DPointList:point3d -> MultiplyLists2:list2;
+Curve3:value -> MakeHSLColor2:hue;
+CutList2:partialList -> CalculateList:xValues;
+FireOnStart:started -> MakeParametricPoints2:time [style=invis];
+FireOnStart:started -> MakeParametricPoints:time [style=invis];
+HoldList2:heldValue -> AdjustLoudness:samples;
+InterleaveLists2:interleavedList -> MakeLineMesh2:positions;
+Make3DObject:object -> MakeList7:1;
+MakeDictionary4:dictionary -> CalculateList:values;
+MakeHSLColor2:color -> MakeUnlitColorShader:color;
+MakeLineMesh2:mesh -> Make3DObject:mesh;
+MakeList10:list -> MakeDictionary4:values;
+MakeList11:list -> MakeDictionary4:keys;
+MakeList6:list -> RenderSceneToWindow:setWindowProperties;
+MakeList7:list -> RenderSceneToWindow:objects;
+MakeList8:list -> HoldList2:initialValue;
+MakeParametricPoints2:points -> ScaleList2:list;
+MakeParametricPoints:points -> MultiplyLists2:list1;
+MakeUnlitColorShader:shader -> Make3DObject:shader;
+MixAudioChannels3:mixedSamples -> CalculateAmplitudeForFrequencies:samples;
+MultiplyLists2:productList -> Convert3DPointListTo2DPointList:xyz;
+ReceiveLiveAudio:receivedChannels -> HoldList2:newValue;
+RenderSceneToWindow:requestedFrame -> Curve3:time;
+RenderSceneToWindow:requestedFrame -> HoldList2:refresh;
+ScaleList2:scaledList -> Convert3DPointListTo2DPointList4:xyz;
+}
