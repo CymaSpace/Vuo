@@ -1,0 +1,92 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright © 2018 [Bodysoulspirit](https://vuo.org/user/2475)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+AdjustLoudness2 [type="vuo.audio.loudness" version="2.0.0" label="Adjust Loudness|<refresh>refresh\l|<samples>samples\l|<loudness>loudness\l|<adjustedSamples>adjustedSamples\r" pos="810,1050" fillcolor="magenta"];
+AllowChanges3 [type="vuo.event.allowChanges2.VuoInteger" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="1995,570"];
+AllowChanges4 [type="vuo.event.allowChanges2.VuoInteger" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="1995,510"];
+AllowFirstEvent [type="vuo.event.allowFirst" version="1.0.0" label="Allow First Event|<refresh>refresh\l|<event>event\l|<reset>reset\l|<firstEvent>firstEvent\r" pos="810,840"];
+AllowPeriodicEvents [type="vuo.time.allowPeriodic" version="1.0.0" label="Allow Periodic Events|<refresh>refresh\l|<time>time\l|<period>period\l|<periodicTime>periodicTime\r" pos="1275,630" _period="0.10000000000000001"];
+CalculateAmplitudeForFrequencies2 [type="vuo.audio.analyze.fft2" version="2.0.1" label="Calculate Amplitude for Frequencies|<refresh>refresh\l|<samples>samples\l|<frequencyBins>frequencyBins\l|<frequencyBinAveraging>frequencyBinAveraging\l|<amplitudes>amplitudes\r" pos="1185,1230" _frequencyBins="\"255\"" _frequencyBinAveraging="\"quadratic\""];
+CalculateList2 [type="vuo.math.calculate.list" version="1.1.0" label="Calculate List|<refresh>refresh\l|<expression>expression\l|<xValues>xValues\l|<values>values\l|<results>results\r" pos="1305,1410" _expression="\{\"expressions\":[\"clamp(x,0,1)\"],\"inputVariables\":[\"x\"],\"outputVariables\":[\"result\"]\}"];
+CalculateLoudness [type="vuo.audio.analyze.loudness" version="2.0.0" label="Calculate Loudness|<refresh>refresh\l|<samples>samples\l|<loudness>loudness\r" pos="1140,720"];
+CopyLayer [type="vuo.layer.copy.trs" version="2.0.1" label="Copy Layer|<refresh>refresh\l|<layer>layer\l|<translations>translations\l|<rotations>rotations\l|<scales>scales\l|<copies>copies\r" pos="1785,1065"];
+CutList3 [type="vuo.list.cut.VuoReal" version="1.0.1" label="Cut List|<refresh>refresh\l|<list>list\l|<startPosition>startPosition\l|<itemCount>itemCount\l|<partialList>partialList\r" pos="1350,1320" _startPosition="1" _itemCount="12"];
+HoldList3 [type="vuo.data.hold.list.VuoAudioSamples" version="1.0.0" label="Hold List|<refresh>refresh\l|<initialValue>initialValue\l|<newValue>newValue\l|<heldValue>heldValue\r" pos="840,975"];
+HoldValue2 [type="vuo.data.hold.VuoReal" version="2.0.0" label="Hold Value|<refresh>refresh\l|<initialValue>initialValue\l|<newValue>newValue\l|<heldValue>heldValue\r" pos="1350,705"];
+Make2DTransform [type="vuo.transform.make.2d" version="1.0.0" label="Make 2D Transform|<refresh>refresh\l|<translation>translation\l|<rotation>rotation\l|<scale>scale\l|<transform>transform\r" pos="1980,960" _translation="\{\"x\":0.0,\"y\":0.0\}" _rotation="180"];
+MakeColorImage [type="vuo.image.make.color" version="1.0.1" label="Make Color Image|<refresh>refresh\l|<color>color\l|<width>width\l|<height>height\l|<image>image\r" pos="1305,870" _color="\{\"r\":1,\"g\":1,\"b\":1,\"a\":1\}" _width="800" _height="800"];
+MakeColorLayer [type="vuo.layer.make.color" version="1.2.0" label="Make Color Layer|<refresh>refresh\l|<name>name\l|<color>color\l|<anchor>anchor\l|<center>center\l|<rotation>rotation\l|<width>width\l|<height>height\l|<layer>layer\r" pos="2010,660" _center="\{\"x\":0.0,\"y\":0.0\}" _rotation="0.0" _width="4" _height="3"];
+MakeDictionary2 [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="990,1455"];
+MakeHSLColor [type="vuo.color.make.hsl" version="2.0.0" label="Make HSL Color|<refresh>refresh\l|<hue>hue\l|<saturation>saturation\l|<lightness>lightness\l|<opacity>opacity\l|<color>color\r" pos="1770,675" _saturation="1" _lightness="0.5" _opacity="1"];
+MakeList [type="vuo.list.make.2.VuoLayer" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="2211,671"];
+MakeList19 [type="vuo.list.make.0.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<list>list\r" pos="1264,1451"];
+MakeList20 [type="vuo.list.make.0.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<list>list\r" pos="990,1455"];
+MakeList5 [type="vuo.list.make.1.VuoPoint2d" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<list>list\r" pos="1739,1091" _1="\{\"x\":0,\"y\":0\}"];
+MakeList7 [type="vuo.list.make.0.VuoAudioSamples" version="2.0.0" label="Make List|<refresh>refresh\l|<list>list\r" pos="799,986"];
+MakePointsAlongLine3 [type="vuo.point.make.curve.VuoReal" version="1.0.0" label="Make Points along Line|<refresh>refresh\l|<startPosition>startPosition\l|<endPosition>endPosition\l|<curve>curve\l|<easing>easing\l|<numberOfPoints>numberOfPoints\l|<points>points\r" pos="1515,1095" _endPosition="-330" _curve="\"linear\"" _easing="\"in\"" _numberOfPoints="12"];
+MakeQuadLayer [type="vuo.layer.make.quad" version="1.0.0" label="Make Quad Layer|<refresh>refresh\l|<image>image\l|<projection>projection\l|<gamma>gamma\l|<topLeft>topLeft\l|<topRight>topRight\l|<bottomLeft>bottomLeft\l|<bottomRight>bottomRight\l|<leftEdge>leftEdge\l|<rightEdge>rightEdge\l|<topEdge>topEdge\l|<bottomEdge>bottomEdge\l|<quad>quad\r" pos="1560,870" _projection="\"perspective\"" _gamma="1" _topLeft="\{\"x\":-0.13500000536441803,\"y\":0.5\}" _topRight="\{\"x\":0.13500000536441803,\"y\":0.5\}" _bottomLeft="\{\"x\":-0.0010000000474974513,\"y\":0\}" _bottomRight="\{\"x\":0.0010000000474974513,\"y\":0\}" _leftEdge="\{\"cutoff\":0,\"gamma\":1,\"crop\":0\}" _rightEdge="\{\"cutoff\":0,\"gamma\":1,\"crop\":0\}" _topEdge="\{\"cutoff\":0,\"gamma\":1,\"crop\":0\}" _bottomEdge="\{\"cutoff\":0,\"gamma\":1,\"crop\":0\}"];
+MergeXYLists [type="vuo.point.merge.xy" version="1.0.0" label="Merge XY Lists|<refresh>refresh\l|<x>x\l|<y>y\l|<points>points\r" pos="1575,1230"];
+MixAudioChannels [type="vuo.audio.mix" version="2.0.0" label="Mix Audio Channels|<refresh>refresh\l|<samples>samples\l|<mixedSamples>mixedSamples\r" pos="1065,840"];
+MixAudioChannels2 [type="vuo.audio.mix" version="2.0.0" label="Mix Audio Channels|<refresh>refresh\l|<samples>samples\l|<mixedSamples>mixedSamples\r" pos="1230,450"];
+ReceiveLiveAudio2 [type="vuo.audio.receive" version="1.0.1" label="Receive Live Audio|<refresh>refresh\l|<device>device\l|<receivedChannels>receivedChannels\r" pos="780,915" _receivedChannels_eventThrottling="drop"];
+RenderLayersToImage [type="vuo.layer.render.image" version="1.2.0" label="Render Layers to Image|<refresh>refresh\l|<layers>layers\l|<width>width\l|<height>height\l|<colorDepth>colorDepth\l|<multisampling>multisampling\l|<image>image\r|<renderedLayers>renderedLayers\r" pos="2280,660" _colorDepth="\"8bpc\"" _multisampling="\"off\""];
+RollingAverageList2 [type="co.parabox.list.average.VuoReal" version="1.0.0" label="Rolling Average List|<refresh>refresh\l|<list>list\l|<sampleSize>sampleSize\l|<averagedList>averagedList\r" pos="1290,1500" fillcolor="magenta"];
+Scale [type="vuo.math.scale.VuoReal" version="2.0.0" label="Scale|<refresh>refresh\l|<value>value\l|<start>start\l|<end>end\l|<scaledStart>scaledStart\l|<scaledEnd>scaledEnd\l|<limitToRange>limitToRange\l|<scaledValue>scaledValue\r" pos="1605,540" _start="0." _end="1." _scaledStart="0.5" _scaledEnd="1.1000000000000001" _limitToRange="true"];
+SmoothWithDuration2 [type="vuo.motion.smooth.duration.VuoReal" version="1.1.0" label="Smooth with Duration|<refresh>refresh\l|<time>time\l|<setPosition>setPosition\l|<setTarget>setTarget\l|<duration>duration\l|<curve>curve\l|<easing>easing\l|<position>position\r|<reachedTarget>reachedTarget\r" pos="1515,675" _setPosition="0." _duration="0.10000000000000001" _curve="\"linear\"" _easing="\"in\""];
+TransformLayer [type="vuo.layer.transform" version="1.0.0" label="Transform Layer|<refresh>refresh\l|<transform>transform\l|<layer>layer\l|<transformedLayer>transformedLayer\r" pos="1995,1050"];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<height>height\r|<width>width\r|<time>time\r|<Loudness>Loudness\r|<SmoothAverage>SmoothAverage\r|<Scale>Scale\r" _height_type="VuoInteger" _width_type="VuoInteger" _time_type="VuoReal" _Loudness_type="VuoReal" _Loudness_suggestedMin="0" _Loudness_suggestedMax="2" _Loudness="1.75" _SmoothAverage_type="VuoInteger" _SmoothAverage_suggestedMin="2" _SmoothAverage_suggestedMax="20" _SmoothAverage="4" _Scale_type="VuoPoint2d" _Scale_suggestedStep="\{\"x\":0.1,\"y\":0.1\}" _Scale="\{\"x\":2,\"y\":2\}"];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<outputImage>outputImage\l" _outputImage_type="VuoImage"];
+
+AdjustLoudness2:adjustedSamples -> MixAudioChannels2:samples;
+AllowChanges3:changedValue -> RenderLayersToImage:height;
+AllowChanges4:changedValue -> RenderLayersToImage:width;
+AllowFirstEvent:firstEvent -> MakeColorImage:color;
+AllowFirstEvent:firstEvent -> MakePointsAlongLine3:startPosition;
+AllowPeriodicEvents:periodicTime -> HoldValue2:refresh;
+CalculateAmplitudeForFrequencies2:amplitudes -> CutList3:list;
+CalculateList2:results -> RollingAverageList2:list;
+CalculateLoudness:loudness -> HoldValue2:newValue;
+CopyLayer:copies -> TransformLayer:layer;
+CutList3:partialList -> CalculateList2:xValues;
+HoldList3:heldValue -> AdjustLoudness2:samples;
+HoldList3:heldValue -> MixAudioChannels:samples;
+HoldValue2:heldValue -> SmoothWithDuration2:setTarget;
+Make2DTransform:transform -> TransformLayer:transform;
+MakeColorImage:image -> MakeQuadLayer:image;
+MakeColorLayer:layer -> MakeList:1;
+MakeDictionary2:dictionary -> CalculateList2:values;
+MakeHSLColor:color -> MakeColorLayer:color;
+MakeList19:list -> MakeDictionary2:values;
+MakeList20:list -> MakeDictionary2:keys;
+MakeList5:list -> CopyLayer:translations;
+MakeList7:list -> HoldList3:initialValue;
+MakeList:list -> RenderLayersToImage:layers;
+MakePointsAlongLine3:points -> CopyLayer:rotations;
+MakeQuadLayer:quad -> CopyLayer:layer;
+MergeXYLists:points -> CopyLayer:scales;
+MixAudioChannels2:mixedSamples -> CalculateAmplitudeForFrequencies2:samples;
+MixAudioChannels:mixedSamples -> CalculateLoudness:samples;
+PublishedInputs:Loudness -> AdjustLoudness2:loudness;
+PublishedInputs:Scale -> Make2DTransform:scale;
+PublishedInputs:SmoothAverage -> RollingAverageList2:sampleSize;
+PublishedInputs:height -> AllowChanges3:value;
+PublishedInputs:time -> AllowFirstEvent:event;
+PublishedInputs:time -> AllowPeriodicEvents:time;
+PublishedInputs:time -> HoldList3:refresh;
+PublishedInputs:time -> SmoothWithDuration2:time;
+PublishedInputs:width -> AllowChanges4:value;
+ReceiveLiveAudio2:receivedChannels -> HoldList3:newValue;
+RenderLayersToImage:image -> PublishedOutputs:outputImage;
+RollingAverageList2:averagedList -> MergeXYLists:x;
+RollingAverageList2:averagedList -> MergeXYLists:y;
+Scale:scaledValue -> MakeHSLColor:hue;
+SmoothWithDuration2:position -> Scale:value;
+TransformLayer:transformedLayer -> MakeList:2;
+}

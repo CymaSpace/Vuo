@@ -1,0 +1,83 @@
+/**
+ * @file
+ * This composition does...
+ *
+ * @copyright Copyright © 2018 [Bodysoulspirit](https://vuo.org/user/2475)
+ * @see This is a Vuo Composition source code file.  See http://vuo.org for further information.
+ */
+
+digraph G
+{
+AdjustLoudness2 [type="vuo.audio.loudness" version="2.0.0" label="Adjust Loudness|<refresh>refresh\l|<samples>samples\l|<loudness>loudness\l|<adjustedSamples>adjustedSamples\r" pos="870,1230" fillcolor="magenta"];
+AllowChanges2 [type="vuo.event.allowChanges2.VuoInteger" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="1980,870"];
+AllowChanges3 [type="vuo.event.allowChanges2.VuoInteger" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="1980,930"];
+AllowFirstEvent [type="vuo.event.allowFirst" version="1.0.0" label="Allow First Event|<refresh>refresh\l|<event>event\l|<reset>reset\l|<firstEvent>firstEvent\r" pos="870,1020"];
+ApplyMask2 [type="vuo.image.apply.mask" version="1.1.2" label="Apply Mask|<refresh>refresh\l|<image>image\l|<mask>mask\l|<maskedImage>maskedImage\r" pos="2535,960"];
+BlendImages [type="vuo.image.blend" version="1.2.1" label="Blend Images|<refresh>refresh\l|<background>background\l|<foreground>foreground\l|<blendMode>blendMode\l|<foregroundOpacity>foregroundOpacity\l|<replaceOpacity>replaceOpacity\l|<blended>blended\r" pos="2730,870" _blendMode="\"normal\"" _foregroundOpacity="1" _replaceOpacity="true"];
+CalculateAmplitudeForFrequencies2 [type="vuo.audio.analyze.fft2" version="2.0.1" label="Calculate Amplitude for Frequencies|<refresh>refresh\l|<samples>samples\l|<frequencyBins>frequencyBins\l|<frequencyBinAveraging>frequencyBinAveraging\l|<amplitudes>amplitudes\r" pos="1185,1230" _frequencyBins="\"255\"" _frequencyBinAveraging="\"quadratic\""];
+CalculateList2 [type="vuo.math.calculate.list" version="1.1.0" label="Calculate List|<refresh>refresh\l|<expression>expression\l|<xValues>xValues\l|<values>values\l|<results>results\r" pos="1305,1410" _expression="\{\"expressions\":[\"clamp(x,0,1)\"],\"inputVariables\":[\"x\"],\"outputVariables\":[\"result\"]\}"];
+CopyLayer [type="vuo.layer.copy.trs" version="2.0.1" label="Copy Layer|<refresh>refresh\l|<layer>layer\l|<translations>translations\l|<rotations>rotations\l|<scales>scales\l|<copies>copies\r" pos="1785,1065"];
+CutList3 [type="vuo.list.cut.VuoReal" version="1.0.1" label="Cut List|<refresh>refresh\l|<list>list\l|<startPosition>startPosition\l|<itemCount>itemCount\l|<partialList>partialList\r" pos="1350,1320" _startPosition="1" _itemCount="12"];
+HoldList3 [type="vuo.data.hold.list.VuoAudioSamples" version="1.0.0" label="Hold List|<refresh>refresh\l|<initialValue>initialValue\l|<newValue>newValue\l|<heldValue>heldValue\r" pos="900,1155"];
+MakeColorImage [type="vuo.image.make.color" version="1.0.1" label="Make Color Image|<refresh>refresh\l|<color>color\l|<width>width\l|<height>height\l|<image>image\r" pos="1305,870" _color="\{\"r\":1,\"g\":1,\"b\":1,\"a\":1\}" _width="800" _height="800"];
+MakeColorImage2 [type="vuo.image.make.color" version="1.0.1" label="Make Color Image|<refresh>refresh\l|<color>color\l|<width>width\l|<height>height\l|<image>image\r" pos="2520,855" _color="\{\"r\":1,\"g\":1,\"b\":1,\"a\":1\}"];
+MakeDictionary2 [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="990,1455"];
+MakeList10 [type="vuo.list.make.1.VuoLayer" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<list>list\r" pos="2226,1061"];
+MakeList16 [type="vuo.list.make.7.VuoColor" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<4>4\l|<5>5\l|<6>6\l|<7>7\l|<list>list\r" pos="2194,866" _1="\{\"r\":1,\"g\":0,\"b\":0.50196081399917603,\"a\":1\}" _2="\{\"r\":1,\"g\":0.40000000596046448,\"b\":0.40000000596046448,\"a\":1\}" _3="\{\"r\":1,\"g\":1,\"b\":0,\"a\":1\}" _4="\{\"r\":0.40000000596046448,\"g\":1,\"b\":0.40000000596046448,\"a\":1\}" _5="\{\"r\":0,\"g\":1,\"b\":1,\"a\":1\}" _6="\{\"r\":0,\"g\":0.50196081399917603,\"b\":1,\"a\":1\}" _7="\{\"r\":0.50196081399917603,\"g\":0,\"b\":1,\"a\":1\}"];
+MakeList19 [type="vuo.list.make.0.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<list>list\r" pos="1264,1451"];
+MakeList20 [type="vuo.list.make.0.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<list>list\r" pos="990,1455"];
+MakeList5 [type="vuo.list.make.1.VuoPoint2d" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<list>list\r" pos="1739,1091" _1="\{\"x\":0,\"y\":0\}"];
+MakeList7 [type="vuo.list.make.0.VuoAudioSamples" version="2.0.0" label="Make List|<refresh>refresh\l|<list>list\r" pos="859,1166"];
+MakePointsAlongLine3 [type="vuo.point.make.curve.VuoReal" version="1.0.0" label="Make Points along Line|<refresh>refresh\l|<startPosition>startPosition\l|<endPosition>endPosition\l|<curve>curve\l|<easing>easing\l|<numberOfPoints>numberOfPoints\l|<points>points\r" pos="1515,1095" _endPosition="-330" _curve="\"linear\"" _easing="\"in\"" _numberOfPoints="12"];
+MakeQuadLayer [type="vuo.layer.make.quad" version="1.0.0" label="Make Quad Layer|<refresh>refresh\l|<image>image\l|<projection>projection\l|<gamma>gamma\l|<topLeft>topLeft\l|<topRight>topRight\l|<bottomLeft>bottomLeft\l|<bottomRight>bottomRight\l|<leftEdge>leftEdge\l|<rightEdge>rightEdge\l|<topEdge>topEdge\l|<bottomEdge>bottomEdge\l|<quad>quad\r" pos="1560,870" _projection="\"perspective\"" _gamma="1" _topLeft="\{\"x\":-0.13500000536441803,\"y\":0.5\}" _topRight="\{\"x\":0.13500000536441803,\"y\":0.5\}" _bottomLeft="\{\"x\":-0.0010000000474974513,\"y\":0\}" _bottomRight="\{\"x\":0.0010000000474974513,\"y\":0\}" _leftEdge="\{\"cutoff\":0,\"gamma\":1,\"crop\":0\}" _rightEdge="\{\"cutoff\":0,\"gamma\":1,\"crop\":0\}" _topEdge="\{\"cutoff\":0,\"gamma\":1,\"crop\":0\}" _bottomEdge="\{\"cutoff\":0,\"gamma\":1,\"crop\":0\}"];
+MakeRadialGradientImage3 [type="vuo.image.make.gradient.radial2" version="2.0.0" label="Make Radial Gradient Image|<refresh>refresh\l|<colors>colors\l|<center>center\l|<radius>radius\l|<noiseAmount>noiseAmount\l|<width>width\l|<height>height\l|<image>image\r" pos="2265,855" _center="\{\"x\":0.0,\"y\":0.0\}" _radius="0.5" _noiseAmount="0"];
+MergeXYLists [type="vuo.point.merge.xy" version="1.0.0" label="Merge XY Lists|<refresh>refresh\l|<x>x\l|<y>y\l|<points>points\r" pos="1575,1230"];
+MixAudioChannels2 [type="vuo.audio.mix" version="2.0.0" label="Mix Audio Channels|<refresh>refresh\l|<samples>samples\l|<mixedSamples>mixedSamples\r" pos="1230,450"];
+ReceiveLiveAudio2 [type="vuo.audio.receive" version="1.0.1" label="Receive Live Audio|<refresh>refresh\l|<device>device\l|<receivedChannels>receivedChannels\r" pos="840,1095" _receivedChannels_eventThrottling="drop"];
+RenderLayersToImage [type="vuo.layer.render.image" version="1.2.0" label="Render Layers to Image|<refresh>refresh\l|<layers>layers\l|<width>width\l|<height>height\l|<colorDepth>colorDepth\l|<multisampling>multisampling\l|<image>image\r|<renderedLayers>renderedLayers\r" pos="2295,1050" _colorDepth="\"8bpc\"" _multisampling="\"off\""];
+RollingAverageList2 [type="co.parabox.list.average.VuoReal" version="1.0.0" label="Rolling Average List|<refresh>refresh\l|<list>list\l|<sampleSize>sampleSize\l|<averagedList>averagedList\r" pos="1290,1500" fillcolor="magenta" _sampleSize="4"];
+TransformLayer [type="vuo.layer.transform" version="1.0.0" label="Transform Layer|<refresh>refresh\l|<transform>transform\l|<layer>layer\l|<transformedLayer>transformedLayer\r" pos="1995,1050" _transform="\{\"translation\":[0,0],\"rotation\":3.1415926292538643,\"scale\":[1,1]\}"];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<width>width\r|<time>time\r|<height>height\r|<Loudness>Loudness\r" _width_type="VuoInteger" _time_type="VuoReal" _height_type="VuoInteger" _Loudness_type="VuoReal" _Loudness_suggestedMin="0" _Loudness_suggestedMax="2" _Loudness="1.75"];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<outputImage>outputImage\l" _outputImage_type="VuoImage"];
+
+AdjustLoudness2:adjustedSamples -> MixAudioChannels2:samples;
+AllowChanges2:changedValue -> MakeColorImage2:width;
+AllowChanges2:changedValue -> MakeRadialGradientImage3:width;
+AllowChanges2:changedValue -> RenderLayersToImage:width;
+AllowChanges3:changedValue -> MakeColorImage2:height;
+AllowChanges3:changedValue -> MakeRadialGradientImage3:height;
+AllowChanges3:changedValue -> RenderLayersToImage:height;
+AllowFirstEvent:firstEvent -> MakeColorImage:color [style=invis];
+AllowFirstEvent:firstEvent -> MakePointsAlongLine3:startPosition [style=invis];
+ApplyMask2:maskedImage -> BlendImages:foreground;
+BlendImages:blended -> PublishedOutputs:outputImage;
+CalculateAmplitudeForFrequencies2:amplitudes -> CutList3:list;
+CalculateList2:results -> RollingAverageList2:list;
+CopyLayer:copies -> TransformLayer:layer;
+CutList3:partialList -> CalculateList2:xValues;
+HoldList3:heldValue -> AdjustLoudness2:samples;
+MakeColorImage2:image -> BlendImages:background;
+MakeColorImage:image -> MakeQuadLayer:image;
+MakeDictionary2:dictionary -> CalculateList2:values;
+MakeList10:list -> RenderLayersToImage:layers;
+MakeList16:list -> MakeRadialGradientImage3:colors;
+MakeList19:list -> MakeDictionary2:values;
+MakeList20:list -> MakeDictionary2:keys;
+MakeList5:list -> CopyLayer:translations;
+MakeList7:list -> HoldList3:initialValue;
+MakePointsAlongLine3:points -> CopyLayer:rotations;
+MakeQuadLayer:quad -> CopyLayer:layer;
+MakeRadialGradientImage3:image -> ApplyMask2:image;
+MergeXYLists:points -> CopyLayer:scales;
+MixAudioChannels2:mixedSamples -> CalculateAmplitudeForFrequencies2:samples;
+PublishedInputs:Loudness -> AdjustLoudness2:loudness;
+PublishedInputs:height -> AllowChanges3:value;
+PublishedInputs:time -> AllowFirstEvent:event;
+PublishedInputs:time -> HoldList3:refresh;
+PublishedInputs:width -> AllowChanges2:value;
+ReceiveLiveAudio2:receivedChannels -> HoldList3:newValue;
+RenderLayersToImage:image -> ApplyMask2:mask;
+RollingAverageList2:averagedList -> MergeXYLists:x;
+RollingAverageList2:averagedList -> MergeXYLists:y;
+TransformLayer:transformedLayer -> MakeList10:1;
+}
